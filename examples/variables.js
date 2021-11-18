@@ -1,20 +1,20 @@
-let message;
+let message
 
-message = 'Hello, World';
+message = 'Hello, World'
 
 // This alert shows the variable content
-alert(message);
+alert(message)
 
 // Declaring multiple variable in the same line, ins't recommend
-let user = 'Maria', age = 22, Smile = true;
+let user = 'Maria', age = 22, Smile = true
 
-let hello = 'Hello world!';
+let hello = 'Hello world!'
 
 // copy 'Hello world' from message into hello
-hello = message;
+hello = message
 
 // Using camel case
-let newVariable = 123;
+let newVariable = 123
 
 // Valid names
 let $apple = 'Apple'

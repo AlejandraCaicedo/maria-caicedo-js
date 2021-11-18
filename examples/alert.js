@@ -1,5 +1,5 @@
 // this is a declaration
-alert("I'm JavaScript!");
+alert("I'm JavaScript!")
 
 // Two declarations with semicolon
 alert("Hello");
