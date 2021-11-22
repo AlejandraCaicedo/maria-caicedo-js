@@ -36,4 +36,3 @@ function User(name) {
 }
 
 let maria = new User("Maria")
-
