@@ -60,30 +60,17 @@ function diagonalDifference(arr) {
 }
 
 // The power sum
-function powerSum(X, N) {
-  let count = 0
-  let sum = 0
+function powerSum(X, N, next, sum) {
+  if (sum == X) {
+    return 1
+  } else {
+    let count = 0
 
-  first: for (let i = 1; i < (X / 2); i++) {
-    let powerI = Math.pow(i, N)
-    if (powerI + sum < X) {
-      sum += powerI
-      second: for (let j = 1; j < (X / 2); j++) {
-        let powerJ = Math.pow(j, N)
-        if (powerJ + sum < X) {
-          sum += powerJ
-        }else if(powerJ + sum == X){
-          count += 1
-          break second
-        }else{
-          sum = 0
-          continue first
-        }
+    if (sum < X) {
+      for (let i = next; i <= (X / N); i++) {
+        count += powerSum(X, N, i + 1, sum + Math.pow(i, N))
       }
-    }else if(powerI + sum == X){
-      break first
-      count += 1
     }
+    return count
   }
-  return count
 }
