@@ -22,13 +22,13 @@ function minimumNumber(n, password) {
     let check = [false, false, false, false]
     for (let i = 0; i < n; i++) {
       let char = password.charAt(i)
-      if (specialCharacter.includes(char) && check[0] == false) {
-        check[0] = true
-      } else if (!specialCharacter.includes(char) && char === char.toLowerCase() && check[1] == false) {
+      if (specialCharacter.includes(char)) {
         check[1] = true
-      } else if (+char.isInteger && !specialCharacter.includes(char) && check[2] == false) {
+      } else if (!specialCharacter.includes(char) && char === char.toLowerCase()) {
         check[2] = true
-      } else if (!specialCharacter.includes(char) && char === char.toUpperCase() && check[3] == false) {
+      } else if (+char.isInteger && !specialCharacter.includes(char)) {
+        check[0] = true
+      } else if (!specialCharacter.includes(char) && char === char.toUpperCase()) {
         check[3] = true
       }
     }
@@ -39,4 +39,10 @@ function minimumNumber(n, password) {
     }
   }
   return minumun
+}
+
+// Simple array sum
+function simpleArraySum(ar) {
+  let sum = ar.reduce((n1, n2) => n1 + n2, 0)
+  return sum
 }
