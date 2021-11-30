@@ -3,19 +3,18 @@
 // Endpoint for todos: https://jsonplaceholder.typicode.com/todos
 // Endpoint for users: https://jsonplaceholder.typicode.com/users
 
-let users;
-let todos;
-let result = [];
-
 async function showNameCompany() {
+
+  let result = [];
+
   fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
     .then((dataUsers) => {
-      users = dataUsers;
+      const users = dataUsers;
       fetch("https://jsonplaceholder.typicode.com/todos")
         .then((response) => response.json())
         .then((dataTodos) => {
-          todos = dataTodos;
+          const todos = dataTodos;
           users.forEach((user) => {
             todos.forEach((todo) => {
               if (user.id === todo.userId && todo.title.includes('delectus')) {
@@ -33,4 +32,4 @@ async function showNameCompany() {
     });
 }
 
-showNameCompany()
+showNameCompany();
