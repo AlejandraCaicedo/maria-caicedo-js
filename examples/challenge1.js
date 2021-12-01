@@ -69,3 +69,21 @@ function powerSum(X, N, next, sum) {
     return count
   }
 }
+
+// Simple array sum
+function simpleArraySum(ar) {
+  let sum = ar.reduce((n1, n2) => n1 + n2, 0)
+  return sum
+}
+
+// Diagonal difference
+function diagonalDifference(arr) {
+  // Write your code here
+  let primaryDiagonal = 0
+  let secondaryDiagonal = 0
+  for (let i = 0; i < arr.length; i++) {
+    primaryDiagonal += arr[i][i]
+    secondaryDiagonal += arr[i][arr.length - i - 1]
+  }
+  return Math.abs(primaryDiagonal - secondaryDiagonal)
+}
