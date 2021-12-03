@@ -83,7 +83,7 @@ function diagonalDifference(arr) {
  * @param {number} N the integer power to raise numbers to
  * @param {number} next initial value 1, the integer where nested iteration starts, the next value to raise
  * @param {number} sum initial value 0, the sum of powers found in a complete iteration
- * @returns the number of possible combinations calculated
+ * @returns {number} the number of possible combinations calculated
  */
 function powerSum(X, N, next, sum) {
   if (sum == X) {
