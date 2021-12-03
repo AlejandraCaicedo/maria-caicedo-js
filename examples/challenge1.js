@@ -63,7 +63,7 @@ function simpleArraySum(ar) {
  * Function that given a square matrix,
  * Calculates the absolute difference between the sums of its diagonals
  * @param {array} arr an array of integers
- * @returns the absolute diagonal difference
+ * @returns {number} the absolute diagonal difference
  */
 function diagonalDifference(arr) {
   let primaryDiagonal = 0
