@@ -45,40 +45,6 @@ function minimumNumber(n, password) {
   }
 }
 
-// Simple array sum
-function simpleArraySum(ar) {
-  let sum = ar.reduce((n1, n2) => n1 + n2, 0)
-  return sum
-}
-
-// Diagonal difference
-function diagonalDifference(arr) {
-  // Write your code here
-  let primaryDiagonal = 0
-  let secondaryDiagonal = 0
-  for (let i = 0; i < arr.length; i++) {
-    primaryDiagonal += arr[i][i]
-    secondaryDiagonal += arr[i][arr.length - i - 1]
-  }
-  return Math.abs(primaryDiagonal - secondaryDiagonal)
-}
-
-// The power sum
-function powerSum(X, N, next, sum) {
-  if (sum == X) {
-    return 1
-  } else {
-    let count = 0
-
-    if (sum < X) {
-      for (let i = next; i <= (X / N); i++) {
-        count += powerSum(X, N, i + 1, sum + Math.pow(i, N))
-      }
-    }
-    return count
-  }
-}
-
 /**
  * Function that given an array of integers, finds the sum of its elements
  * @param {array} ar an array of integers 
