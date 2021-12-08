@@ -1,7 +1,12 @@
-jest.mock('./challenge2.js')
+jest.mock('../request');
 
-const { showNameCompany } = require('./challenge2')
+it('works with async/await', async () => {
+  expect.assertions(1);
+  const data = await response.json();
+  expect(data).toEqual('Mark');
+});
 
-test('should fetch todos and users', () => {
-
-}
+it('works with async/await and resolves', async () => {
+  expect.assertions(1);
+  await expect(user.getUserName(5)).resolves.toEqual('Paul');
+});
