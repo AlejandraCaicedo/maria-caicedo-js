@@ -1,15 +1,16 @@
-'use strict'
+'use strict';
+
+import URL from './URL';
 
 async function showNameCompany() {
 
-  const URL = 'https://jsonplaceholder.typicode.com';
-  let result = [];
+  const result = [];
 
-  let responseUsers = await fetch(`${URL}/users`);
-  let users = await responseUsers.json();
+  const responseUsers = await fetch(`${URL}/users`);
+  const users = await responseUsers.json();
 
-  let responseTodos = await fetch(`${URL}/todos`)
-  let todos = await responseTodos.json();
+  const responseTodos = await fetch(`${URL}/todos`);
+  const todos = await responseTodos.json();
 
   users.forEach((user) => {
     todos.forEach((todo) => {
