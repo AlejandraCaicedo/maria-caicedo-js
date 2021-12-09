@@ -1,7 +1,7 @@
-import URL from './URL';
+import { URL_TODOS as URL_TODOS, URL_USERS as URL_USERS } from './URL';
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
-    json: () => Promise.resolve({ rates: { CAD: 1.42 } }),
+    
   })
 );

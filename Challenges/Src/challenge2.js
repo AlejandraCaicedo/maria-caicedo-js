@@ -1,15 +1,15 @@
 'use strict';
 
-import URL from './URL';
+import { URL_TODOS as URL_TODOS, URL_USERS as URL_USERS } from './URL';
 
 async function showNameCompany() {
 
   const result = [];
 
-  const responseUsers = await fetch(`${URL}/users`);
+  const responseUsers = await fetch(URL_USERS);
   const users = await responseUsers.json();
 
-  const responseTodos = await fetch(`${URL}/todos`);
+  const responseTodos = await fetch(URL_TODOS);
   const todos = await responseTodos.json();
 
   users.forEach((user) => {
