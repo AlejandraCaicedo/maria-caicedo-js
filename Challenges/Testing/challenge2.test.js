@@ -1,12 +1,15 @@
-jest.mock('../request');
+// import { URL_TODOS as URL_TODOS, URL_USERS as URL_USERS } from './URL';
+import showNameCompany from '../Src/challenge2';
 
-it('works with async/await', async () => {
-  expect.assertions(1);
-  const data = await response.json();
-  expect(data).toEqual('Mark');
-});
+global.fetch = jest.fn(() =>
+  Promise.resolve({
+    json: () => Promise.resolve()
+  })
+);
 
-it('works with async/await and resolves', async () => {
-  expect.assertions(1);
-  await expect(user.getUserName(5)).resolves.toEqual('Paul');
+it("show name company", async () => {
+  const result = await showNameCompany();
+
+  expect(result).toEqual(1.42);
+  expect(fetch).toHaveBeenCalledTimes(1);
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-import { URL_TODOS as URL_TODOS, URL_USERS as URL_USERS } from './URL';
+import { URL_TODOS, URL_USERS } from './URL';
 
 async function showNameCompany() {
 
@@ -22,6 +22,10 @@ async function showNameCompany() {
       }
     });
   });
+
+  console.log(result);
+
+  return result;
 }
 
-showNameCompany();
+export { showNameCompany };
