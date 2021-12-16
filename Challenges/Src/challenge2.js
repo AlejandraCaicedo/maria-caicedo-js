@@ -1,6 +1,9 @@
 'use strict';
 
-import { URL_TODOS, URL_USERS } from './URL';
+const URL = require('./URL');
+
+const URL_TODOS = URL.URL_TODOS;
+const URL_USERS = URL.URL_USERS;
 
 async function showNameCompany() {
 
@@ -28,4 +31,4 @@ async function showNameCompany() {
   return result;
 }
 
-export { showNameCompany };
+module.exports = showNameCompany;
